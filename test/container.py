@@ -25,7 +25,7 @@ class CartContainerTest(unittest.TestCase):
                    '-h', 'carts',
                    '--link',
                    CartContainerTest.mongo_container_name,
-                   'weaveworksdemos/carts:' + self.COMMIT]
+                   'haroldmei/carts:' + self.COMMIT]
         Docker().execute(command)
         self.ip = Docker().get_container_ip(CartContainerTest.container_name)
 
