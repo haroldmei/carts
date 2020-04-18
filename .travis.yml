@@ -12,10 +12,10 @@ env:
 
 script:
   - set -e
-  - travis_wait ./scripts/build.sh;
+  - ./scripts/build.sh;
 
 after_success:
-#  - set -e;
+  - set -e;
   - docker login -u $DOCKER_USER -p $DOCKER_PASS;
   - ./scripts/push.sh
 notifications:
